@@ -13,7 +13,7 @@
         at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:811)
      Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'android.content.Intent android.content.Context.registerReceiver(android.content.BroadcastReceiver, android.content.IntentFilter)' on a null object reference
         at com.zoop.zoopandroidsdk.TerminalListManager.startTerminalsDiscovery(TerminalListManager.java:201)
-        at br.com.jwk.zoop.ConfigPinPadActivity.init(ConfigPinPadActivity.java:66)
+        at startTerminalListManager(ConfigPinPadActivity.java:66)
         at br.com.jwk.zoop.ConfigPinPadActivity.onRequestPermissionsResult(ConfigPinPadActivity.java:59)
         at android.app.Activity.dispatchRequestPermissionsResult(Activity.java:7458)
         at android.app.Activity.dispatchActivityResult(Activity.java:7309)

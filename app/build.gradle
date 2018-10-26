@@ -9,6 +9,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "MARKETPLACE_ID", "\"${getPropertie("MARKETPLACE_ID")}\"")
+        buildConfigField("String", "SELLER_ID", "\"${getPropertie("SELLER_ID")}\"")
+        buildConfigField("String", "PUBLISHABLE_KEY", "\"${getPropertie("PUBLISHABLE_KEY")}\"")
     }
     buildTypes {
         release {
@@ -16,6 +20,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+}
+
+def getPropertie(key) {
+    Properties props = new Properties()
+    props.load(new FileInputStream(new File('secret.properties')))
+    return props[key]
 }
 
 dependencies {
